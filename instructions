@@ -1,0 +1,45 @@
+
+
+[vagrant@istio ~]$ lsb_release -dirc
+
+It it returns command not found
+
+[vagrant@istio ~]$ sudo yum install redhat-lsb-core
+
+Once installed try 
+
+[vagrant@istio ~]$ lsb_release -dirc
+Distributor ID: CentOS
+Description:    CentOS Linux release 7.6.1810 (Core)
+Release:        7.6.1810
+Codename:       Core
+
+
+[vagrant@istio ~]$ which lxc
+/usr/bin/which: no lxc in (/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/vagrant/.local/bin:/home/vagrant/bin)
+
+
+[vagrant@istio ~]$ which lxd
+/usr/bin/which: no lxc in (/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/vagrant/.local/bin:/home/vagrant/bin)
+
+
+[vagrant@istio ~]$ sudo yum install epel-release
+[vagrant@istio ~]$ sudo yum install debootstrap perl libvirt
+[vagrant@istio ~]$ sudo yum install lxc lxc-templates
+[vagrant@istio ~]$ sudo systemctl status lxc.service
+[vagrant@istio ~]$ sudo systemctl start lxc.service
+[vagrant@istio ~]$ sudo systemctl start libvirtd 
+[vagrant@istio ~]$ sudo systemctl status lxc.service
+
+
+
+
+
+
+
+
+
+
+
+
+
